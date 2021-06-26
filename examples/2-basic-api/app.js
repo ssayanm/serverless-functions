@@ -13,11 +13,11 @@ const fetchData = async () => {
         return `   <article class="product">
       <img
         src="${url}"
-        alt="utopia sofa"
+        alt="${name}"
       />
       <div class="info">
-        <h5>"${name}"</h5>
-        <h5 class="price">$"${price}"5</h5>
+        <h5>${name}</h5>
+        <h5 class="price">$${price}</h5>
       </div>
     </article> `;
       })
