@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const url = "https://jolly-bartik-0d83fe.netlify.app/api/1-hello";
+const url =
+  "https://fervent-allen-3324f9.netlify.app/.netlify/functions/1-hello";
 
 const Hello = () => {
   const [prod, setProd] = useState([]);
@@ -10,7 +11,6 @@ const Hello = () => {
       // const { data } = await axios.get("/.netlify/functions/1-hello");
       const { data } = await axios.get(url);
       setProd(data);
-      console.log(data);
     } catch (error) {
       console.log(error);
     }
@@ -19,22 +19,13 @@ const Hello = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  return <section className="page-container">First Component</section>;
+  // console.log(data);
+  return (
+    <section className="page-container">
+      <h1>first example</h1>
+      <h2 class="result">{prod}</h2>
+    </section>
+  );
 };
 
 export default Hello;
-
-const result = document.querySelector(".result");
-
-// const fetchData = async () => {
-//   try {
-//     // const { data } = await axios.get("/.netlify/functions/1-hello");
-//     const { data } = await axios.get("/api/1-hello");
-//     result.textContent = data;
-//   } catch (error) {
-//     console.log(error.response.data);
-//     result.textContent = error.response.data;
-//   }
-// };
-
-// fetchData();
