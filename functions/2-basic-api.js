@@ -1,4 +1,4 @@
-const items = require("../assets/data");
+const items = require("../src/assets/data");
 
 exports.handler = async (event, context, cb) => {
   return {
