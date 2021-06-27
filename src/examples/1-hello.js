@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const url =
-  "https://fervent-allen-3324f9.netlify.app/.netlify/functions/1-hello";
+const url = `${process.env.REACT_APP_API_URL}/api/1-hello`;
 
 const Hello = () => {
   const [prod, setProd] = useState([]);
@@ -23,7 +22,7 @@ const Hello = () => {
   return (
     <section className="page-container">
       <h1>first example</h1>
-      <h2 class="result">{prod}</h2>
+      <h2 className="result">{prod}</h2>
     </section>
   );
 };

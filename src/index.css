@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400|Inconsolata:400');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400|Inconsolata:400");
 *,
 ::after,
 ::before {
@@ -53,8 +53,8 @@
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
   /* typography */
   --defaultFontSize: 87.5%;
-  --headingFont: 'Inconsolata', monospace;
-  --bodyFont: 'Montserrat', sans-serif;
+  --headingFont: "Inconsolata", monospace;
+  --bodyFont: "Montserrat", sans-serif;
   --smallText: 0.8em;
   --extraSmallText: 0.7em;
   /* rest */
@@ -295,7 +295,7 @@ form > *:last-child {
 .form-loading::before {
   background: var(--white);
   position: absolute;
-  content: '';
+  content: "";
   height: 100%;
   width: 100%;
   top: 0;
@@ -310,7 +310,7 @@ form > *:last-child {
 }
 
 .form-loading::after {
-  content: '';
+  content: "";
   position: absolute;
   top: calc(50% - 3rem);
   left: calc(50% - 3rem);
@@ -334,4 +334,43 @@ form > *:last-child {
 
 .example-links a:hover {
   background: var(--primary-100);
+}
+
+.result {
+  padding: 5rem 0;
+}
+
+.product {
+  margin-bottom: 2rem;
+}
+.product img {
+  width: 100%;
+  display: block;
+  height: 300px;
+  border-radius: var(--radius);
+  object-fit: cover;
+}
+
+.info {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.price {
+  color: var(--red-dark);
+}
+@media screen and (min-width: 776px) {
+  .result {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+  .product img {
+    height: 200px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .result {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
