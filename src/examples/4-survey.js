@@ -1,7 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Survey = () => {
-  return <section className='page-container'>Survey</section>
-}
+  return (
+    <section className="page-container">
+      <h1>Survey</h1>
+    </section>
+  );
+};
 
-export default Survey
+export default Survey;
