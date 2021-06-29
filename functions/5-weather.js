@@ -8,6 +8,9 @@ exports.handler = async (event, context, cb) => {
 
   if (method !== "POST") {
     return {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
       statusCode: 405,
       body: "Only POST Requests Allowed",
     };
